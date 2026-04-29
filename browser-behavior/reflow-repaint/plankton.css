@@ -1,0 +1,116 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background: linear-gradient(180deg, #001428 0%, #000814 60%, #000409 100%);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  overflow: hidden;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  :hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 28px;
+
+  .light-direct-btn {
+    background: linear-gradient(135deg, #434343, #000000);
+  }
+
+  .light-batched-btn {
+    background: linear-gradient(135deg, #1e91b1, #18385e);
+  }
+
+  .reset-btn {
+    background: linear-gradient(135deg, #283e51, #485563);
+  }
+}
+
+.performance-log {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  color: #fff;
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  z-index: 2;
+  pointer-events: none;
+
+  p {
+    margin: 0 0 6px;
+  }
+  strong {
+    color: #7df9ff;
+  }
+}
+
+.ocean {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.plankton {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0a2a3a;
+  transition: none;
+}
+
+.ocean.lit .plankton {
+  background: #7df9ff;
+  box-shadow: 0 0 6px 2px #7df9ff;
+}
+
+.ocean.lit .plankton:nth-child(5n + 2) {
+  background: #39ff14;
+  box-shadow: 0 0 6px 2px #39ff14;
+}
+
+.ocean.lit .plankton:nth-child(5n + 3) {
+  background: #80ffea;
+  box-shadow: 0 0 6px 2px #80ffea;
+}
+
+.ocean.lit .plankton:nth-child(5n + 4) {
+  background: #a0f0ff;
+  box-shadow: 0 0 6px 2px #a0f0ff;
+}
+
+.ocean.lit .plankton:nth-child(5n + 5) {
+  background: #5be7a9;
+  box-shadow: 0 0 6px 2px #5be7a9;
+}
