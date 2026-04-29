@@ -1,0 +1,146 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("../../assets/aquarium-background.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+
+  overflow: hidden;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+h1 {
+  padding-top: 28px;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  :hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  .feed-fish-btn {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+
+  .feed-fish-loop-btn,
+  .feed-fish-microtask-btn {
+    background: linear-gradient(135deg, #434343, #000000);
+  }
+
+  .stop-feed-btn {
+    background: linear-gradient(135deg, #bc3716, #f31509);
+  }
+}
+
+.blue-fish-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+
+  .btn {
+    padding: 12px 12px;
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+
+  .start-blue-fish-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+  }
+
+  .stop-blue-fish-btn {
+    background: linear-gradient(135deg, #283e51, #485563);
+  }
+}
+
+.feed-text {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  color: #fff;
+  display: none;
+
+  p {
+    margin: 0 0 8px;
+  }
+}
+
+.aquarium {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fish-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.fish-comment {
+  position: relative;
+  margin: 0 0 10px 40px;
+  padding: 10px 14px;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+  ::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 24px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+  }
+}

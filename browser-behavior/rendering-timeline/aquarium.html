@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>The Aquarium</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="aquarium.css" />
+  </head>
+  <body>
+    <h1>
+      Feed the fishes with knowledge about
+      <a
+        href="https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        layout thrashing</a
+      >
+    </h1>
+    <section class="action-buttons">
+      <button class="feed-fish-btn btn">Feed</button>
+      <button class="feed-fish-loop-btn btn">
+        Feed (anti-pattern while loop)
+      </button>
+      <button class="feed-fish-microtask-btn btn">
+        Feed (anti-pattern microtasks)
+      </button>
+      <button class="stop-feed-btn btn">Stop feeding</button>
+    </section>
+    <section class="feed-text"></section>
+    <section class="aquarium">
+      <div id="red-fish" class="fish-wrapper">
+        <p class="fish-comment">
+          Maybe I am the slowest, but I have smooth transition. Thanks,
+          <strong>requestAnimationFrame!</strong>
+        </p>
+        <img
+          src="../../assets/red_fish.png"
+          alt="Red Fish (animated with requestAnimationFrame)"
+        />
+      </div>
+      <div id="green-fish" class="fish-wrapper">
+        <p class="fish-comment">
+          I like <strong>setTimeout</strong>! Why not to use it?
+        </p>
+        <img
+          src="../../assets/green_fish.png"
+          alt="Green Fish (animated with setTimeout)"
+        />
+      </div>
+      <div class="blue-fish-buttons">
+        <button class="start-blue-fish-btn btn">
+          Let's start queueTask madness RIGHT NOW!
+        </button>
+        <button class="stop-blue-fish-btn btn">
+          Enough madness for today!
+        </button>
+      </div>
+
+      <div id="blue-fish" class="fish-wrapper">
+        <p class="fish-comment">
+          I am so crazy that you even can not see all my transitions!
+          <strong>queueTask</strong> make me SO FAST!
+        </p>
+        <img
+          src="../../assets/blue_fish.svg"
+          alt="Blue Fish (animated with queueTask)"
+        />
+      </div>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
